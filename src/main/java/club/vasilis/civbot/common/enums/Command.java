@@ -11,7 +11,7 @@ public enum Command {
     /**
      * minecraft
      */
-    FRIEND_TEST(1, 1, "ping"),
+    MINECRAFT_PING(1, 1, "/ping"),
 
     PRIVATE_DEFAULT(2, 0, ""),
     ;
@@ -45,7 +45,7 @@ public enum Command {
 
         List<Command> collect = Arrays.stream(Command.values()).filter(e -> e.type.equals(1)).collect(Collectors.toList());
         for (Command value : collect) {
-            if (keyWord.matches(value.keyWord + ".*")) {
+            if (keyWord.toLowerCase().matches(value.keyWord + ".*")) {
                 return value;
             }
         }

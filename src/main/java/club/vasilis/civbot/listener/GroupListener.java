@@ -29,13 +29,16 @@ public class GroupListener extends SimpleListenerHost {
 
     @EventHandler
     private void onMessage(GroupMessageEvent event) {
+        log.info("groupMessage");
         MessageChain messageChain = event.getMessage();
         PlainText plainText = messageChain.first(PlainText.Key);
         if (plainText != null) {
+            log.info(plainText.contentToString());
             Command command = Command.groupFind(MessageUtils.getKeyword(plainText.contentToString(), 1));
             if (command == null) {
                 return;
             }
+            log.info(command.keyWord);
             GroupMessage groupMessage = messageFactory.getGroupMessage(command);
             groupMessage.execute(event.getGroup(), event.getSender(), messageChain);
         }
