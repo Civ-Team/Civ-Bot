@@ -1,6 +1,6 @@
 package club.vasilis.civbot;
 
-import club.vasilis.civbot.network.minecraft.MinecraftClientLogin;
+import club.vasilis.civbot.network.jx3.RetrofitUrl;
 import com.github.steveice10.mc.protocol.MinecraftConstants;
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
 import com.github.steveice10.mc.protocol.data.SubProtocol;
@@ -10,22 +10,27 @@ import com.github.steveice10.packetlib.Client;
 import com.github.steveice10.packetlib.tcp.TcpSessionFactory;
 import lombok.extern.slf4j.Slf4j;
 import net.mamoe.mirai.message.data.Image;
-import net.mamoe.mirai.message.data.MessageChainBuilder;
-import net.mamoe.mirai.utils.ExternalImageJvmKt;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.net.Proxy;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
 class MiraiRobotApplicationTests {
+    @Autowired
+    private RetrofitUrl retrofitUrl;
 
+    @Test
+    void name() throws IOException {
+//        JSONObject  js= retrofitUrl.getFlower("绝代天骄", 1);
+//        System.out.println(js.toJSONString());
+    }
 
     @Test
     void contextLoads() {

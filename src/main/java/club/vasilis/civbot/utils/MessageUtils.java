@@ -15,7 +15,7 @@ public class MessageUtils {
      * @param content
      * @return
      */
-    private static List<String> split(String content) {
+    public static List<String> split(String content) {
         return Arrays.stream(content.split(" ")).filter(StringUtils::isNotBlank).collect(Collectors.toList());
     }
 

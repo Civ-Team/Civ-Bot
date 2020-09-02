@@ -13,6 +13,8 @@ public enum Command {
      */
     MINECRAFT_PING(1, 1, "/ping"),
 
+    FLOWER(1,2,"花价"),
+
     PRIVATE_DEFAULT(2, 0, ""),
     ;
     /**

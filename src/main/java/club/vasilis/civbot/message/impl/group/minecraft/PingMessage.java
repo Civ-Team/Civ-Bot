@@ -1,4 +1,4 @@
-package club.vasilis.civbot.message.group.minecraft;
+package club.vasilis.civbot.message.impl.group.minecraft;
 
 import club.vasilis.civbot.common.enums.Command;
 import club.vasilis.civbot.message.GroupMessage;
@@ -10,7 +10,6 @@ import net.mamoe.mirai.message.data.MessageChain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
