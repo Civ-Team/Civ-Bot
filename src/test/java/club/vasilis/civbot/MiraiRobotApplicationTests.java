@@ -1,6 +1,8 @@
 package club.vasilis.civbot;
 
 import club.vasilis.civbot.network.jx3.RetrofitUrl;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.github.steveice10.mc.protocol.MinecraftConstants;
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
 import com.github.steveice10.mc.protocol.data.SubProtocol;
@@ -30,6 +32,15 @@ class MiraiRobotApplicationTests {
     void name() throws IOException {
 //        JSONObject  js= retrofitUrl.getFlower("绝代天骄", 1);
 //        System.out.println(js.toJSONString());
+        for (int i = 0; i < 1000; i++) {
+            double random = Math.random();
+            random*=100;
+            if (random<=2){
+                String string = retrofitUrl.yy().execute().body().string();
+                JSONObject jsonObject = JSON.parseObject(string);
+                System.out.println(jsonObject.getString("hitokoto")+"========"+i);
+            }
+        }
     }
 
     @Test

@@ -43,6 +43,8 @@ public class FlowerMessage implements GroupMessage {
         if (split.size() == 2) {
             flowerQuery(group, MessageUtils.getKeyword(message, 2), defaultServer);
 
+        } else if (split.size() == 1) {
+            group.sendMessage("花价 [花名] [区服(可选)]");
         } else if (split.size() > 2) {
             flowerQuery(group, MessageUtils.getKeyword(message, 2), MessageUtils.getKeyword(message, 3));
 
