@@ -20,6 +20,12 @@ minebot:
   password:
   admin:
 
+rcon:
+  serverAddress:
+  serverPort:
+  password:
+
+
 
 
 
